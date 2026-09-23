@@ -16,22 +16,6 @@ The project is deliberately designed as a production-style system, not a noteboo
 
 > Built DemandPulse, an event-driven AWS ML platform that streams retail sales events through Amazon MSK, transforms a governed S3 data lake with EMR Serverless, trains and governs demand-forecasting models with SageMaker Pipelines, and serves monitored stockout predictions through a secure API.
 
-### 2. Why this is a strong ML Engineer Associate project
-
-The current AWS Certified Machine Learning Engineer - Associate validates production implementation and operationalization of ML workloads. The MLA-C02 beta also adds GenAI, RAG, agentic workflows, and responsible AI while retaining the core ML-engineering domains. This project focuses first on the core lifecycle and has an optional GenAI extension; it maps naturally to the in-scope analytics, integration, ML, security, storage, governance, and monitoring services.
-
-This is preferable to a simple classifier because it makes every service earn its place:
-
-| Capability | Project evidence |
-| --- | --- |
-| Data ingestion and storage | Event stream, immutable S3 raw zone, partitioned lakehouse tables |
-| Data processing | EMR Serverless Spark job with validation, deduplication, and feature creation |
-| ML development | SageMaker Processing, training, experiments, metrics, and Model Registry |
-| Deployment | Registered model promoted through a SageMaker Pipeline to a real-time endpoint or asynchronous inference |
-| MLOps | Pipeline versioning, approval gate, retraining trigger, data/model drift monitoring, rollback |
-| Security and governance | Least-privilege IAM, encryption, private networking, Lake Formation permissions, audit logs |
-| Operations and cost | CloudWatch alarms, DLQs, budgets, lifecycle policies, automatic shutdown/deletion |
-
 ### 3. Business scenario
 
 A multi-store retailer loses sales when fast-moving products go out of stock and wastes money when it over-orders slow products. Sales transactions and inventory updates arrive throughout the day. Operations staff need a daily demand forecast, a stockout risk score, and a defensible reorder quantity for each product-store pair.
